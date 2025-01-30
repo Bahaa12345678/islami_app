@@ -63,7 +63,7 @@ class _SebhaTabState extends State<SebhaTab> with SingleTickerProviderStateMixin
           _buildBackgroundImage(),
           Column(
             children: [
-              _buildHeaderImage(),
+
               const SizedBox(height: 20),
               _buildTasbeehContent(),
             ],
@@ -84,11 +84,7 @@ class _SebhaTabState extends State<SebhaTab> with SingleTickerProviderStateMixin
     );
   }
 
-  Widget _buildHeaderImage() {
-    return Center(
-      child: Image.asset('assets/images/onboarding_header.png'),
-    );
-  }
+
 
   Widget _buildTasbeehContent() {
     return Column(
@@ -118,8 +114,8 @@ class _SebhaTabState extends State<SebhaTab> with SingleTickerProviderStateMixin
     return Center(
       child: Image.asset(
         'assets/images/head_sebha.png',
-        height: 23,
-        width: 80,
+        height: 96,
+        width: 120,
       ),
     );
   }
@@ -144,17 +140,16 @@ class _SebhaTabState extends State<SebhaTab> with SingleTickerProviderStateMixin
     return AnimatedBuilder(
       animation: _rotationController,
       builder: (context, child) {
-        return ClipRect(
-          child: Transform.rotate(
-            angle: _rotationController.value * (2 * 3.14159 / 33),
-            child: Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.41,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/sebha.png'),
-                  fit: BoxFit.fill,
-                ),
+        return Transform.rotate(
+          angle: _rotationController.value * (2 * 3.14159 / 33),
+          child: Container(
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.41,
+
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/sebha.png'),
+                fit: BoxFit.fill,
               ),
             ),
           ),
