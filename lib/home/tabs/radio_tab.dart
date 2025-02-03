@@ -92,7 +92,7 @@ class ToggleButtonsSection extends StatelessWidget {
   }
 
   Widget _buildToggleButton(String label, int index) {
-    return GestureDetector(
+    return InkWell(
       onTap: () => onTabSelected(index),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
@@ -128,7 +128,7 @@ class RadioTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
