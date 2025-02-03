@@ -114,7 +114,7 @@ class _SebhaTabState extends State<SebhaTab> with SingleTickerProviderStateMixin
     return Center(
       child: Image.asset(
         'assets/images/head_sebha.png',
-        height: 96,
+        height: 65,
         width: 120,
       ),
     );
