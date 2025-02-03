@@ -35,19 +35,19 @@ class _RadioTabState extends State<RadioTab> {
 
   List<Widget> _buildRadioTiles() {
     return [
-      _buildRadioTile("Radio Ibrahim Al-Akdar", 0),
+      _buildRadioTile("Radio ahmad al hothaifa", 0),
       _buildRadioTile("Radio Al-Qaria Yassen", 1),
-      _buildRadioTile("Radio Ahmed Al-Trabulsi", 2),
-      _buildRadioTile("Radio Addokali Mohammad Alalim", 3),
+      _buildRadioTile("Radio Ahmed naser", 2),
+      _buildRadioTile("Radio ibrahim al akhdar ", 3),
     ];
   }
 
   List<Widget> _buildRecitersTiles() {
     return [
-      _buildRadioTile("Ibrahim Al-Akdar", 0),
+      _buildRadioTile("ahmad al hothaifa", 0),
       _buildRadioTile("Al-Qaria Yassen", 1),
-      _buildRadioTile("Ahmed Al-Trabulsi", 2),
-      _buildRadioTile("Addokali Mohammad Alalim", 3),
+      _buildRadioTile("Ahmed naser", 2),
+      _buildRadioTile("ibrahim al akhdar", 3),
     ];
   }
 
