@@ -12,9 +12,9 @@ class TimeTab extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 338, // Adjusted height
+                height: 338,
                 decoration: BoxDecoration(
-                  border: Border.all(width: 3, color: Color(0xffE2BE7F)),
+                  border: Border.all(width: 3, color: const Color(0xffE2BE7F)),
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.transparent,
                 ),
@@ -24,8 +24,7 @@ class TimeTab extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 8),
-
-                       SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       ToggleButtons(
                         children: <Widget>[
                           Padding(
@@ -41,7 +40,7 @@ class TimeTab extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Text(
-                              ' Pray time \n Tuesday',
+                              'Pray time\nTuesday',
                               style: TextStyle(
                                 color: Color(0xffFFFFFF),
                                 fontSize: 18,
@@ -51,7 +50,7 @@ class TimeTab extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Text(
-                              '09 muh,1446',
+                              '09 Muh, 1446',
                               style: TextStyle(
                                 color: Color(0xffFFFFFF),
                                 fontSize: 18,
@@ -59,10 +58,8 @@ class TimeTab extends StatelessWidget {
                             ),
                           ),
                         ],
-                        onPressed: (int index) {
-                          // Handle button selection
-                        },
-                        isSelected: [true, false, false], // Initial selection state
+                        onPressed: (int index) {},
+                        isSelected: [false, true, false],
                         selectedColor: Colors.black,
                         color: Color(0xffE2BE7F),
                         fillColor: Color(0xffE2BE7F),
@@ -76,13 +73,13 @@ class TimeTab extends StatelessWidget {
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: [
-                            PrayerTimeStack('Dhuhr', '01:01 PM'),
+                            PrayerTime('Dhuhr', '01:01 PM'),
                             const SizedBox(width: 10),
-                            PrayerTimeStack('Asr', '04:38 PM'),
+                            PrayerTime('Asr', '04:38 PM'),
                             const SizedBox(width: 10),
-                            PrayerTimeStack('Maghrib', '07:57 PM'),
+                            PrayerTime('Maghrib', '07:57 PM'),
                             const SizedBox(width: 10),
-                            PrayerTimeStack('Isha', '09:00 PM'),
+                            PrayerTime('Isha', '09:00 PM'),
                           ],
                         ),
                       ),
@@ -127,10 +124,9 @@ class TimeTab extends StatelessWidget {
                             height: 185,
                             width: 290,
                             decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image:
-                                    AssetImage('assets/images/azkar.png')
-                                )
+                              image: DecorationImage(
+                                image: AssetImage('assets/images/azkar.png'),
+                              ),
                             ),
                           ),
                         ],
@@ -139,8 +135,7 @@ class TimeTab extends StatelessWidget {
                   ),
                   Container(
                     height: 259,
-                    width: (MediaQuery.of(context).size.width - 60) /
-                        2, // Responsive width
+                    width: (MediaQuery.of(context).size.width - 60) / 2,
                     decoration: BoxDecoration(
                       border: Border.all(color: Color(0xffE2BE7F), width: 2),
                       borderRadius: BorderRadius.circular(20),
@@ -152,7 +147,7 @@ class TimeTab extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Morning azkar',
+                            'Morning Azkar',
                             style: TextStyle(
                               color: Color(0xffFFFFFF),
                               fontSize: 18,
@@ -162,15 +157,12 @@ class TimeTab extends StatelessWidget {
                           Container(
                             height: 185,
                             width: 290,
-                            child:
-                            DecoratedBox(
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/images/Illustration.png'
-                                        )
-                                    )
-                                )
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('assets/images/Illustration.png'),
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -186,7 +178,7 @@ class TimeTab extends StatelessWidget {
     );
   }
 
-  Widget PrayerTimeStack(String prayerName, String prayerTime) {
+  Widget PrayerTime(String prayerName, String prayerTime) {
     return Container(
       width: 100,
       decoration: BoxDecoration(
